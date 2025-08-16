@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="qwCj2hJnsEGyLFPAB2O4yA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="micnt.com.ec/cntapp/guia104/php/guia_cntat.php" CVScreenId="3c27e007-f040-45c7-8971-99aee33ed01e" CvElementArea="1493, 857, 125, 63" CvTextArea="1515, 880, 78, 26" CvTextArgument="Aceptar" CvType="Button" DesignTimeRectangle="1497, 862, 119, 57" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Aceptar' role='push button' /&gt;" Guid="3629321b-7fc5-4293-a4c1-f9ff9edb7dfa" ScopeSelectorArgument="&lt;wnd app='firefox.exe' cls='MozillaWindowClass' title=':: Guía Telefónica CNT EP :: — Mozilla Firefox' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="e8044ac93b01316e4d37c5a20e2a2833.png" xmlns="">0LxzPGTFMHkWDDxMC-HNwxw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

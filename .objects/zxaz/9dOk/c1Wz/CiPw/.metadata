@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Enviar",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "CiPwR0X68k2t9Dd1TaoNvA",
+  "Reference": "gazEMjpLPUOk_1ntKb8o4A/CiPwR0X68k2t9Dd1TaoNvA",
+  "ParentRef": "gazEMjpLPUOk_1ntKb8o4A/c1WzoHPuf02z4uLsz34TDA",
+  "Created": "2025-08-12T09:24:11.7871231Z",
+  "Updated": "2025-08-12T09:24:11.7871231Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.12.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
