@@ -1,0 +1,13 @@
+﻿{
+  "Name": "firefox.exe  Guía Tel…",
+  "Type": "Element",
+  "Id": "GVOT_PMRCUqMBtn96ACgvg",
+  "Reference": "gazEMjpLPUOk_1ntKb8o4A/GVOT_PMRCUqMBtn96ACgvg",
+  "ParentRef": "gazEMjpLPUOk_1ntKb8o4A/c1WzoHPuf02z4uLsz34TDA",
+  "Created": "2025-08-20T04:43:22.018811Z",
+  "Updated": "2025-08-20T04:43:22.018811Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

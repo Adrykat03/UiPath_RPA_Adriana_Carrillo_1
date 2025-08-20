@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Estrella",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Id": "bEmGy9NrQk-zz4yva6RYIA",
+  "Reference": "gazEMjpLPUOk_1ntKb8o4A/bEmGy9NrQk-zz4yva6RYIA",
+  "ParentRef": "gazEMjpLPUOk_1ntKb8o4A/c1WzoHPuf02z4uLsz34TDA",
+  "Created": "2025-08-20T08:32:22.8811468Z",
+  "Updated": "2025-08-20T08:32:22.8811468Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

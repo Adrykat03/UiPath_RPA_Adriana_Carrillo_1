@@ -1,0 +1,14 @@
+﻿{
+  "Name": "casa",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Id": "ymgb4k4-3EWVsfXBFeR45Q",
+  "Reference": "gazEMjpLPUOk_1ntKb8o4A/ymgb4k4-3EWVsfXBFeR45Q",
+  "ParentRef": "gazEMjpLPUOk_1ntKb8o4A/c1WzoHPuf02z4uLsz34TDA",
+  "Created": "2025-08-20T08:08:45.2201473Z",
+  "Updated": "2025-08-20T08:08:45.2201473Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

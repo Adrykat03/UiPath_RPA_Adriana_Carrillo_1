@@ -1,0 +1,14 @@
+﻿{
+  "Name": "insecto",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Id": "ExIsGy0Ut0W1wmQpeZzawQ",
+  "Reference": "gazEMjpLPUOk_1ntKb8o4A/ExIsGy0Ut0W1wmQpeZzawQ",
+  "ParentRef": "gazEMjpLPUOk_1ntKb8o4A/c1WzoHPuf02z4uLsz34TDA",
+  "Created": "2025-08-20T08:37:58.7629523Z",
+  "Updated": "2025-08-20T08:37:58.7629523Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

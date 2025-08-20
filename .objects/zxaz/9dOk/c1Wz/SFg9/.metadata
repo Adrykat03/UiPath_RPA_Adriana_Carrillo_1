@@ -1,0 +1,14 @@
+﻿{
+  "Name": "dados",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Id": "SFg9moQf00-4fTGMykRkBA",
+  "Reference": "gazEMjpLPUOk_1ntKb8o4A/SFg9moQf00-4fTGMykRkBA",
+  "ParentRef": "gazEMjpLPUOk_1ntKb8o4A/c1WzoHPuf02z4uLsz34TDA",
+  "Created": "2025-08-20T08:23:30.5940857Z",
+  "Updated": "2025-08-20T08:23:30.5940857Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

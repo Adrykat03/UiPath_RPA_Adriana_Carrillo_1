@@ -1,0 +1,14 @@
+﻿{
+  "Name": "DIV(2)",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Id": "KYZ8m5tS4kGhhTVnqpV8GA",
+  "Reference": "gazEMjpLPUOk_1ntKb8o4A/KYZ8m5tS4kGhhTVnqpV8GA",
+  "ParentRef": "gazEMjpLPUOk_1ntKb8o4A/c1WzoHPuf02z4uLsz34TDA",
+  "Created": "2025-08-20T09:19:04.7701888Z",
+  "Updated": "2025-08-20T09:19:04.7701888Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

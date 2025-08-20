@@ -1,0 +1,14 @@
+﻿{
+  "Name": "calculadora",
+  "Type": "Element",
+  "TaxonomyType": "Icon",
+  "Id": "SV8B8WBHUUuTONTSc6nLtw",
+  "Reference": "gazEMjpLPUOk_1ntKb8o4A/SV8B8WBHUUuTONTSc6nLtw",
+  "ParentRef": "gazEMjpLPUOk_1ntKb8o4A/c1WzoHPuf02z4uLsz34TDA",
+  "Created": "2025-08-20T08:19:03.9894773Z",
+  "Updated": "2025-08-20T08:19:03.9894773Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
