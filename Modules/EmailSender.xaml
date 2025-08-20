@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="EmailSender" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umae="clr-namespace:UiPath.Mail.Activities.Enums;assembly=UiPath.Mail.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.Mail.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="EmailSender" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umae="clr-namespace:UiPath.Mail.Activities.Enums;assembly=UiPath.Mail.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.Mail.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_Correo" Type="OutArgument(x:String)" />
     <x:Property Name="RutaExcel" Type="InArgument(x:String)" />
@@ -74,6 +74,7 @@
       <x:String>UiPath.UIAutomationNext.Models</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Net</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -146,10 +147,25 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>System.Private.Xml</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="EmailSender" sap:VirtualizedContainerService.HintSize="1400.2857142857142,786.2857142857143" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="" DisplayName="EmailSender" sap:VirtualizedContainerService.HintSize="1106,496" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="variable2" />
+      <Variable x:TypeArguments="x:String" Name="resourceAttachment" />
+      <Variable x:TypeArguments="ss:SecureString" Name="miPassword">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="ss:SecureString" ExpressionText="New System.Net.NetworkCredential(&quot;&quot;, &quot;nxiy eysf mimi tgdb&quot;).SecurePassword" />
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:String" Name="varcuerpo" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -158,7 +174,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="486.85714285714283,116.57142857142857" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="450.2857142857143,116.57142857142857" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_Correo]</OutArgument>
       </Assign.To>
@@ -166,39 +182,30 @@
         <InArgument x:TypeArguments="x:String">[varCorreoDestino]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="486.85714285714283,280.57142857142856" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="450.2857142857143,169.14285714285714" sap2010:WorkflowViewState.IdRef="Sequence_2">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Bandeja de mensajes" sap:VirtualizedContainerService.HintSize="416,109.14285714285714" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[out_Correo]" />
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
-    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" Email="{x:Null}" Files="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" Port="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" Server="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" AttachmentInputMode="Existing" Body="[&quot;Se encontraron &quot; + dtContactos.RowCount.ToString + &quot; contactos en la búsqueda.&quot;]" ConnectionId="9dcb4c69-f827-4c4d-9085-796a4b5d710c" ConnectionMode="IntegrationService" DisplayName="Enviar correo electrónico SMTP" EnableSSL="True" From="adrykat_16@live.com" sap:VirtualizedContainerService.HintSize="486.85714285714283,335.42857142857144" sap2010:WorkflowViewState.IdRef="SendMail_2" IgnoreCRL="False" IsBodyHtml="False" SecureConnection="Auto" Subject="Reporte Contactos" To="[GlobalVariablesNamespace.GlobalVariables.varCorreoDestino]" UseISConnection="True" UseRichTextEditor="True">
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" TimeoutMS="{x:Null}" AttachmentInputMode="FilePaths" Body="[&quot;Se encontraron &quot; + TotalContactos.ToString + &quot; contactos en la búsqueda.&quot;]" ConnectionMode="LegacyConfiguration" DisplayName="Enviar correo electrónico SMTP" Email="adrykat3003@gmail.com" EnableSSL="True" From="adrykat_16@live.com" sap:VirtualizedContainerService.HintSize="450.2857142857143,325.7142857142857" sap2010:WorkflowViewState.IdRef="SendMail_3" IgnoreCRL="False" IsBodyHtml="True" Port="587" SecureConnection="Auto" SecurePassword="[miPassword]" Server="smtp.gmail.com" Subject="REPORTE CONTACTOS" To="[out_Correo]" UseISConnection="False" UseOAuth="False" UseRichTextEditor="True">
       <ui:SendMail.AttachmentsBackup>
-        <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
+        <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
           <usau:BackupSlot.BackupValues>
             <scg:List x:TypeArguments="x:Object" x:Key="Existing" Capacity="1">
               <x:Null />
-            </scg:List>
-            <scg:List x:TypeArguments="x:Object" x:Key="FilePaths" Capacity="2">
-              <x:Null />
-              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
             </scg:List>
           </usau:BackupSlot.BackupValues>
         </usau:BackupSlot>
       </ui:SendMail.AttachmentsBackup>
       <ui:SendMail.ConnectionDetailsBackupSlot>
-        <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="IntegrationService">
+        <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="LegacyConfiguration">
           <usau:BackupSlot.BackupValues>
-            <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+            <scg:List x:TypeArguments="x:Object" x:Key="IntegrationService" Capacity="1">
+              <x:String>9dcb4c69-f827-4c4d-9085-796a4b5d710c</x:String>
+            </scg:List>
           </usau:BackupSlot.BackupValues>
         </usau:BackupSlot>
       </ui:SendMail.ConnectionDetailsBackupSlot>
+      <ui:SendMail.Files>
+        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+          <InArgument x:TypeArguments="x:String">[RutaExcel]</InArgument>
+        </scg:List>
+      </ui:SendMail.Files>
     </ui:SendMail>
   </Sequence>
 </Activity>

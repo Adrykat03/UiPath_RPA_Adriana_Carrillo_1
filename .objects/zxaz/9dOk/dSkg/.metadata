@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Firefox  Guía Telefónica CNT EP (8)",
+  "Type": "Screen",
+  "Id": "dSkg52VHw0uAp-qr98U98A",
+  "Reference": "gazEMjpLPUOk_1ntKb8o4A/dSkg52VHw0uAp-qr98U98A",
+  "ParentRef": "gazEMjpLPUOk_1ntKb8o4A/9dOkjsihPUivMGmmdJdZfQ",
+  "Created": "2025-08-20T11:26:24.3901352Z",
+  "Updated": "2025-08-20T11:26:24.3901352Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.6.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
